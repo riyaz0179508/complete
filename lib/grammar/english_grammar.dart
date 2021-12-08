@@ -1,5 +1,9 @@
 import 'package:easy_english/grammar/aritcle.dart';
+import 'package:easy_english/grammar/degree.dart';
 import 'package:easy_english/grammar/preposition.dart';
+import 'package:easy_english/grammar/right_from.dart';
+import 'package:easy_english/grammar/sentense.dart';
+import 'package:easy_english/grammar/tag_question.dart';
 import 'package:easy_english/grammar/tense.dart';
 import 'package:flutter/material.dart';
 
@@ -67,6 +71,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
               ListTile(
                 onTap: (){
 
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Sentense()));
                 },
                 selectedTileColor: Color(0xff00ffff),
                 hoverColor: Colors.yellow,
@@ -74,21 +79,11 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 title: Text("Sentenses"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
+
               Divider(),
               ListTile(
                 onTap: (){
-
-                },
-                selectedTileColor: Color(0xff00ffff),
-                hoverColor: Colors.yellow,
-                focusColor: Colors.yellow,
-                title: Text("Narration"),
-                leading: Icon(Icons.wb_incandescent_rounded),
-              ),
-              Divider(),
-              ListTile(
-                onTap: (){
-
+                  Navigator.push(context, MaterialPageRoute(builder: (contxt)=>Degree()));
                 },
                 selectedTileColor: Color(0xff00ffff),
                 hoverColor: Colors.yellow,
@@ -104,18 +99,34 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 selectedTileColor: Color(0xff00ffff),
                 hoverColor: Colors.yellow,
                 focusColor: Colors.yellow,
-                title: Text("Sufix-Prefix"),
+                title: Text("Suffixes - Prefixes"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
               Divider(),
               ListTile(
                 onTap: (){
 
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>TagQuestion()));
                 },
                 selectedTileColor: Color(0xff00ffff),
                 hoverColor: Colors.yellow,
                 focusColor: Colors.yellow,
                 title: Text("Tag question"),
+                leading: Icon(Icons.wb_incandescent_rounded),
+              ),
+              Divider(),
+
+
+              ListTile(
+                onTap: (){
+
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>RightFormOfVerb()));
+                },
+                selectedTileColor: Color(0xff00ffff),
+                hoverColor: Colors.yellow,
+                focusColor: Colors.yellow,
+                title: Text("Right Forms of Verbs"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
               Divider(),
