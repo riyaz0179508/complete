@@ -27,12 +27,12 @@ class _HumanBodyState extends State<HumanBody> {
           child: Column(
             children: [
               Container(
-                height: screenHeight*0.35,
+                height: screenHeight*0.50,
                 width: screenWidth,
                 child:
                 Padding(
                   padding:  EdgeInsets.all(screenWidth*0.05),
-                  child: Image.asset("assets/images/img.png"),
+                  child: Image.asset("assets/images/human.png"),
 
                 ),
               ),

@@ -55,7 +55,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* He plays football.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -70,7 +70,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* They eat rice.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
 
@@ -87,7 +87,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* Ashish does not eat rice.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -102,7 +102,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* He will go to school.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -119,7 +119,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* I shall go to the school.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -135,7 +135,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* Ice floats on water.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -152,7 +152,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* All the fruits could be taken.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
               SizedBox(height: screenHeight*0.02),
               Text("7.  Had, rather, let, would better, had better, need not, do not,"
@@ -167,7 +167,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* I need not do the work.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -182,7 +182,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* They have eaten rice.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -197,7 +197,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* I have met him recently.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -213,7 +213,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* I went to Cox's Bazar last month.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -228,7 +228,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* He went to the market to buy a shirt.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -243,7 +243,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* It has been raining for two hours.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -258,7 +258,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* If you work hard, you’ll shine in life.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -273,7 +273,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* I went shopping with a view to buying a shirt.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -288,7 +288,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* By digging the land, she planted trees.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -303,7 +303,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* She can’t go without waiting for me.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -318,7 +318,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* He cannot help doing the assignment.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -333,7 +333,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* Would that I could buy a Toyota car.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -348,7 +348,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* The thief ran away having seen the police.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
               SizedBox(height: screenHeight*0.02),
@@ -363,7 +363,7 @@ class _RightFormOfVerbState extends State<RightFormOfVerb> {
                     "* Allah is everywhere.\n"
                 , style: TextStyle(fontSize: screenWidth*0.04, height: 1.5 ),
               ),
-              Divider(),
+              Divider(thickness: 5),
 
 
 

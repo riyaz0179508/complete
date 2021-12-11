@@ -31,7 +31,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
           ListView(
             children: [
 
-              Divider(),
+              Divider(thickness: 1),
               ListTile(
                 onTap: (){
 
@@ -44,7 +44,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
 
-              Divider(),
+              Divider(thickness: 1),
               ListTile(
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Tense()));
@@ -55,7 +55,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 title: Text("Tense"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
-              Divider(),
+              Divider(thickness: 1),
               ListTile(
                 onTap: (){
 
@@ -67,7 +67,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 title: Text("Preposition"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
-              Divider(),
+              Divider(thickness: 1),
               ListTile(
                 onTap: (){
 
@@ -80,7 +80,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
 
-              Divider(),
+              Divider(thickness: 1),
               ListTile(
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (contxt)=>Degree()));
@@ -91,18 +91,8 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 title: Text("Degree"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
-              Divider(),
-              ListTile(
-                onTap: (){
 
-                },
-                selectedTileColor: Color(0xff00ffff),
-                hoverColor: Colors.yellow,
-                focusColor: Colors.yellow,
-                title: Text("Suffixes - Prefixes"),
-                leading: Icon(Icons.wb_incandescent_rounded),
-              ),
-              Divider(),
+              Divider(thickness: 1),
               ListTile(
                 onTap: (){
 
@@ -115,7 +105,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 title: Text("Tag question"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
-              Divider(),
+              Divider(thickness: 1),
 
 
               ListTile(
@@ -129,7 +119,7 @@ class _EnglishGrammarState extends State<EnglishGrammar> {
                 title: Text("Right Forms of Verbs"),
                 leading: Icon(Icons.wb_incandescent_rounded),
               ),
-              Divider(),
+              Divider(thickness: 1),
             ],
           ),
     );

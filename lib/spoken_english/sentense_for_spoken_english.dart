@@ -28,7 +28,7 @@ class _SentenseForState extends State<SentenseFor> {
           SizedBox(
             height: screenHeight*0.01,
           ),
-          Divider(),
+          Divider(thickness: 1),
           ListTile(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Daily()));
@@ -39,7 +39,7 @@ class _SentenseForState extends State<SentenseFor> {
             title: Text("Daily uses sentense"),
             leading: Icon(Icons.wb_incandescent_rounded),
           ),
-          Divider(),
+          Divider(thickness: 1),
           ListTile(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (Context)=>MakeSentense()));
@@ -50,7 +50,7 @@ class _SentenseForState extends State<SentenseFor> {
             title: Text("Make Sentense"),
             leading: Icon(Icons.wb_incandescent_rounded),
           ),
-          Divider(),
+          Divider(thickness: 1),
           ListTile(
             onTap: (){
 
@@ -62,7 +62,7 @@ class _SentenseForState extends State<SentenseFor> {
             title: Text("Proverbs"),
             leading: Icon(Icons.wb_incandescent_rounded),
           ),
-          Divider(),
+          Divider(thickness: 1),
           ListTile(
             onTap: (){
 
@@ -74,7 +74,7 @@ class _SentenseForState extends State<SentenseFor> {
             title: Text("Conversation"),
             leading: Icon(Icons.wb_incandescent_rounded),
           ),
-          Divider(),
+          Divider(thickness: 1),
 
         ],
       ),

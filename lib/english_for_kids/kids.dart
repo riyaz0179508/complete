@@ -31,7 +31,7 @@ class _KidsState extends State<Kids> {
               Container(
                 height: screenHeight*0.30,
                 width: screenWidth*0.90,
-                child: Image.asset("assets/images/e.jpg"),
+                child: Image.asset("assets/images/pic.png"),
               ),
 
 

@@ -8,6 +8,8 @@ import 'package:easy_english/vucabulary/vucabulary_list.dart';
 import 'package:easy_english/written/written_site.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 
 
 
@@ -125,201 +127,194 @@ class _HomePageState extends State<HomePage> {
                             padding:  EdgeInsets.all(screenWidth*0.05),
                             child: Text("Translator",
                               style: TextStyle(color: Color(0xff0a7e8c),
-                                fontSize: screenWidth*0.04,
+                                fontSize: screenWidth*0.05,
                               ),
                               textAlign: TextAlign.center,
                             ),
                           ),),
                       ),
-                      SizedBox(height: screenWidth*0.01,),
+                      SizedBox(height: screenWidth*0.09,),
 
 
 
-                      Row(
-                        children: [
-                          Padding(
-                            padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.02,
-                            left: screenWidth*0.03, right: screenWidth*0.03,
-                            ),
-                            child:
-                            ElevatedButton(
+                      Padding(
+                        padding:  EdgeInsets.all(screenWidth*0.03),
+                        child: Row(
+                          children: [
 
-
-
-                              style: ElevatedButton.styleFrom(
-                                  side: BorderSide(
-                                    width: 1, style: BorderStyle.solid,
-                                    color: Color(0xff0a7e8c),
-                                  ),
-
-                                primary: Colors.white,
-                              ),
-                                onPressed: (){
-
-                               Navigator.push(context, MaterialPageRoute(builder: (context)=>Kids()));
-                                },
-                                child: Padding(
-                                  padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                                  left: screenWidth*0.03, right: screenWidth*0.04),
-                                  child: Text("English for Kids", style: TextStyle(fontSize: screenWidth*0.04,
-                                  color: Color(0xff0a7e8c)),),
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Kids()));
+                              },
+                              child: Container(
+                                height: screenHeight*0.09,
+                                width: screenWidth*0.44,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(width: 1, color: Color(0xff0a7e8c)),
+                                    borderRadius: BorderRadius.circular(5),
                                 ),
-                            ),
-                          ),
-                          Expanded(child: Row()),
-                          Padding(
-                            padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.02,
-                            right: screenWidth*0.03,
-                            ),
-                            child:
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  side: BorderSide(
-                                    width: 1, style: BorderStyle.solid,
-                                    color: Color(0xff0a7e8c),
-                                  ),
-                                primary: Colors.white,
+                                child:
+                                Center(
+                                  child: Text("English for Kids", style: TextStyle(color: Color(0xff0a7e8c),
+                                    fontSize: screenWidth*0.05,
+                                    fontWeight: FontWeight.bold
+                                  ),),
+                                ),
                               ),
-                                onPressed: (){
+                            ),
+
+                           Expanded(child: Row()),
+
+                            InkWell(
+                              onTap: (){
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>EnglishGrammar()));
-                                },
-                                child: Padding(
-                                  padding: EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                                       right: screenWidth*0.02, left: screenWidth*0.02 ),
-                                  child: Text("English Grammar", style: TextStyle(fontSize: screenWidth*0.04,
-                                  color: Color(0xff0a7e8c) ),),
+                              },
+                              child: Container(
+                                height: screenHeight*0.09,
+                                width: screenWidth*0.44,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(width: 1, color: Color(0xff0a7e8c)),
+                                  borderRadius: BorderRadius.circular(5)
                                 ),
+                                child:
+                                Center(
+                                  child: Text("English Grammar", style: TextStyle(fontSize: screenWidth*0.05,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff0a7e8c)),),
+                                ),
+                              ),
                             ),
-                          ),
 
 
 
-                        ],
+
+
+
+
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(screenWidth*0.03),
+                        child: Row(
+                          children: [
+
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>WrittenSite()));
+                              },
+                              child: Container(
+                                height: screenHeight*0.09,
+                                width: screenWidth*0.44,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(width: 1, color: Color(0xff0a7e8c)),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child:
+                                Center(
+                                  child: Text("Written site", style: TextStyle(fontSize: screenWidth*0.05,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff0a7e8c)),),
+                                ),
+                              ),
+                            ),
+
+                            Expanded(child: Row()),
+
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>SentenseFor()));
+                              },
+                              child: Container(
+                                height: screenHeight*0.09,
+                                width: screenWidth*0.44,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(width: 1, color: Color(0xff0a7e8c)),
+                                    borderRadius: BorderRadius.circular(5)
+                                ),
+                                child:
+                                Center(
+                                  child: Text("Spoken English", style: TextStyle(fontSize: screenWidth*0.05,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff0a7e8c)),),
+                                ),
+                              ),
+                            ),
+
+
+
+
+
+
+
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.all(screenWidth*0.03),
+                        child: Row(
+                          children: [
+
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Vucabulary()));
+                              },
+                              child: Container(
+                                height: screenHeight*0.09,
+                                width: screenWidth*0.44,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(width: 1, color: Color(0xff0a7e8c)),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child:
+                                Center(
+                                  child: Text("Vucabulary", style: TextStyle(fontSize: screenWidth*0.05,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff0a7e8c)),),
+                                ),
+                              ),
+                            ),
+
+                            Expanded(child: Row()),
+
+                            InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>PracticePage()));
+                              },
+                              child: Container(
+                                height: screenHeight*0.09,
+                                width: screenWidth*0.44,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(width: 1, color: Color(0xff0a7e8c)),
+                                    borderRadius: BorderRadius.circular(5)
+                                ),
+                                child:
+                                Center(
+                                  child: Text("More Practice", style: TextStyle(fontSize: screenWidth*0.05,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff0a7e8c)),),
+                                ),
+                              ),
+                            ),
+
+
+
+
+
+
+
+                          ],
+                        ),
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                            left: screenWidth*0.03,
-                            ),
-                            child:
-                            ElevatedButton(
-
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                  side: BorderSide(
-                                    width: 1, style: BorderStyle.solid,
-                                    color: Color(0xff0a7e8c),
-                                  ),
-                              ),
-                                onPressed: (){
-
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>WrittenSite()));
-                                },
-                                child:
-                                Padding(
-                                  padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                                  left: screenWidth*0.07, right: screenWidth*0.07),
-                                  child: Text("Written Site", style: TextStyle(fontSize: screenWidth*0.04,
-                                  color: Color(0xff0a7e8c) ),),
-                                ),
-                            ),
-                          ),
-                          Expanded(child: Row()),
-                          Padding(
-                            padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                            right: screenWidth*0.03,
-                            ),
-                            child:
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                  side: BorderSide(
-                                    width: 1, style: BorderStyle.solid,
-                                    color: Color(0xff0a7e8c),
-                                  )
-                              ),
-                                onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>SentenseFor()));
-                                },
-                                child:
-                                Padding(
-                                  padding: EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                                      left: screenWidth*0.04, right: screenWidth*0.04),
-                                  child: Text("Spoken English", style: TextStyle(fontSize: screenWidth*0.04,
-                                  color: Color(0xff0a7e8c) ),),
-                                ),
-                            ),
-                          ),
-
-
-
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                              left: screenWidth*0.03,
-                            ),
-                            child:
-                            ElevatedButton(
-
-                              style: ElevatedButton.styleFrom(
-                                  primary: Colors.white,
-                                  side: BorderSide(
-                                    width: 1, style: BorderStyle.solid,
-                                    color: Color(0xff0a7e8c),
-                                  )
-                              ),
-                              onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Vucabulary()));
-                              },
-                              child:
-                              Padding(
-                                padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                                  left: screenWidth*0.07,right: screenWidth*0.07,),
-                                child: Text("Vucabulary", style: TextStyle(fontSize: screenWidth*0.04,
-                                    color: Color(0xff0a7e8c)),),
-                              ),
-                            ),
-                          ),
-                          Expanded(child: Row()),
-                          Padding(
-                            padding:  EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                              right: screenWidth*0.03,
-                            ),
-                            child:
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                  primary: Colors.white,
-                                  side: BorderSide(
-                                    width: 1, style: BorderStyle.solid,
-                                    color: Color(0xff0a7e8c),
-                                  )
-                              ),
-                              onPressed: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>PracticePage()));
-                              },
-                              child: Padding(
-                                padding: EdgeInsets.only(top: screenHeight*0.03, bottom: screenHeight*0.03,
-                                    left: screenWidth*0.05, right: screenWidth*0.06),
-                                child: Text("More practice", style: TextStyle(fontSize: screenWidth*0.04,
-                                  color: Color(0xff0a7e8c), ),),
-                              ),
-                            ),
-                          ),
-
-                        ],
-                      ),
-
-
-
-
-
                     ],
                   ),
                 ),
@@ -327,7 +322,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
 
-         backgroundColor: Color(0xff0a7e8c),
+         backgroundColor: Color(0xffd4d4d4 ),
 
 
 
