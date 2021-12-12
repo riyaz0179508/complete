@@ -1,3 +1,4 @@
+import 'package:easy_english/more_practice/about_us.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -62,6 +63,7 @@ class _PracticePageState extends State<PracticePage> {
           ListTile(
             onTap: (){
 
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutUs()));
             },
             selectedTileColor: Color(0xff00ffff),
             hoverColor: Colors.yellow,
