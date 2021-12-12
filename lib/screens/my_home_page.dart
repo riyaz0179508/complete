@@ -22,6 +22,8 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -64,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                     child:
                     Center(
                       child: Text("Easy English BD",
-                      style: TextStyle(fontSize: screenWidth*0.07, color: Colors.white,
+                      style: TextStyle(fontSize: screenWidth*0.06, color: Colors.white,
                       fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -127,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                             padding:  EdgeInsets.all(screenWidth*0.05),
                             child: Text("Translator",
                               style: TextStyle(color: Color(0xff0a7e8c),
-                                fontSize: screenWidth*0.05,
+                                fontSize: screenWidth*0.04,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -157,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                                 child:
                                 Center(
                                   child: Text("English for Kids", style: TextStyle(color: Color(0xff0a7e8c),
-                                    fontSize: screenWidth*0.05,
+                                    fontSize: screenWidth*0.04,
                                     fontWeight: FontWeight.bold
                                   ),),
                                 ),
@@ -180,7 +182,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 child:
                                 Center(
-                                  child: Text("English Grammar", style: TextStyle(fontSize: screenWidth*0.05,
+                                  child: Text("English Grammar", style: TextStyle(fontSize: screenWidth*0.04,
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xff0a7e8c)),),
                                 ),
@@ -215,7 +217,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 child:
                                 Center(
-                                  child: Text("Written site", style: TextStyle(fontSize: screenWidth*0.05,
+                                  child: Text("Written site", style: TextStyle(fontSize: screenWidth*0.04,
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xff0a7e8c)),),
                                 ),
@@ -238,7 +240,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 child:
                                 Center(
-                                  child: Text("Spoken English", style: TextStyle(fontSize: screenWidth*0.05,
+                                  child: Text("Spoken English", style: TextStyle(fontSize: screenWidth*0.04,
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xff0a7e8c)),),
                                 ),
@@ -273,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 child:
                                 Center(
-                                  child: Text("Vucabulary", style: TextStyle(fontSize: screenWidth*0.05,
+                                  child: Text("Vucabulary", style: TextStyle(fontSize: screenWidth*0.04,
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xff0a7e8c)),),
                                 ),
@@ -296,7 +298,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 child:
                                 Center(
-                                  child: Text("More Practice", style: TextStyle(fontSize: screenWidth*0.05,
+                                  child: Text("More Practice", style: TextStyle(fontSize: screenWidth*0.04,
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xff0a7e8c)),),
                                 ),
@@ -322,7 +324,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
 
-         backgroundColor: Color(0xffd4d4d4 ),
+         backgroundColor: Color(0xffa6a6a8),
 
 
 

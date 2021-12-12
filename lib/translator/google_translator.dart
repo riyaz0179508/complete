@@ -18,7 +18,9 @@ class EasyTranslator extends StatefulWidget {
   _EasyTranslatorState createState() => _EasyTranslatorState();
 }
 
+
 class _EasyTranslatorState extends State<EasyTranslator> {
+
 
   @override
   void initState() {
@@ -408,8 +410,7 @@ class _EasyTranslatorState extends State<EasyTranslator> {
                 child: Container(
                   margin: EdgeInsets.only(top: screenHeight*0.01),
                   child: translated_text!=null?Text(translated_text!, style:
-                  TextStyle(fontSize: screenWidth*0.05,
-                      color: Colors.black54),):Padding(
+                  TextStyle(fontSize: screenWidth*0.05),):Padding(
                         padding:  EdgeInsets.all(screenWidth*0.02),
                         child: Text(""),
                       )

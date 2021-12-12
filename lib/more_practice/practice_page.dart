@@ -43,31 +43,8 @@ class _PracticePageState extends State<PracticePage> {
           ),
 
           Divider(),
-          ListTile(
-            onTap: (){
-
-            },
-            selectedTileColor: Color(0xff00ffff),
-            hoverColor: Colors.yellow,
-            focusColor: Colors.yellow,
-            title: Text("facebook Page"),
-            leading: Icon(Icons.paste),
-          ),
-          Divider(),
-
-          ListTile(
-            onTap: (){
-
-            },
-            selectedTileColor: Color(0xff00ffff),
-            hoverColor: Colors.yellow,
-            focusColor: Colors.yellow,
-            title: Text("Youtube"),
-            leading: Icon(Icons.video_call),
-          ),
 
 
-          Divider(),
           ListTile(
             onTap: (){
 
