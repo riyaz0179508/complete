@@ -21,184 +21,191 @@ class EasyTranslator extends StatefulWidget {
 
 class _EasyTranslatorState extends State<EasyTranslator> {
 
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
   }
- bool isLoading=false;
+  bool isLoading=false;
   @override
   Widget build(BuildContext context) {
     final double screenHeight=MediaQuery.of(context).size.height;
     final double screenWidth=MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: screenHeight*0.08,
-        backgroundColor: Color(0xff0a7e8c),
-        // centerTitle: true,
-        title: Text("Easy Translator", style: TextStyle(fontSize: screenWidth*0.05, color: Colors.white),),
-      ),
+    return WillPopScope(
+      onWillPop: ()async{
+        myController.text="Enter Text";
+        _dropDownvalue="Select Language";
+        translated_text="";
+        return true;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: screenHeight*0.08,
+          backgroundColor: Color(0xff0a7e8c),
+          // centerTitle: true,
+          title: Text("Easy Translator", style: TextStyle(fontSize: screenWidth*0.05, color: Colors.white),),
+        ),
 
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: 
-        Form(
-          key: _key,
-          child: Column(
-            children: [
-              SizedBox(height: 40,),
-              Padding(
-                padding:  EdgeInsets.only(left:screenWidth*0.03, right: screenWidth*0.03 ),
-                child: Container(
-                  child: Column(
-                    children: [
-                      SizedBox(height: 30,),
-                      Container(
-                        width: double.infinity,
-                        // height: screenHeight*0.10,
-                        child:
-                        TextFormField(
-                          validator: (text){
-                            if(text== null || text.isEmpty){
-                              return "Please Enter Text";
-                            }
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child:
+          Form(
+            key: _key,
+            child: Column(
+              children: [
+                SizedBox(height: 40,),
+                Padding(
+                  padding:  EdgeInsets.only(left:screenWidth*0.03, right: screenWidth*0.03 ),
+                  child: Container(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 30,),
+                        Container(
+                          width: double.infinity,
+                          // height: screenHeight*0.10,
+                          child:
+                          TextFormField(
+                            validator: (text){
+                              if(text== null || text.isEmpty){
+                                return "Please Enter Text";
+                              }
 
-                          },
-                          keyboardType: TextInputType.multiline,
-                          maxLines: null,
-                          controller: myController,
-                          focusNode: FocusNode(canRequestFocus: false),
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: "Eneter Text",
+                            },
+                            keyboardType: TextInputType.multiline,
+                            maxLines: null,
+                            controller: myController,
+                            focusNode: FocusNode(canRequestFocus: false),
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              labelText: "Eneter Text",
+
+                            ),
 
                           ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding:  EdgeInsets.only(left:screenWidth*0.03, ),
+                  child:
+                  Container(
+                    margin: EdgeInsets.only(top: screenHeight*0.02),
+                    child: DropdownButton<String>(
 
-                        ),
+
+                      isExpanded: true,
+
+                      hint: _dropDownvalue==null? Text("Select language"):
+                      Text(_dropDownvalue!, style: TextStyle(color: Colors.blue),),
+                      items: <String>[
+                        "Bengali",
+                        "English",
+                        "Spanish",
+                        "Chinese",
+                        "Germen",
+                        "Afrikaan",
+                        "Arabic",
+                        "Bhutan",
+                        "Bihar",
+                        "Bulgarian",
+                        "Cambodian",
+                        "French",
+                        "Greek",
+                        "Gujarati",
+                        "Hindi",
+                        "Iceland",
+                        "Indonesian",
+                        "Italian",
+                        "kannada",
+                        "Kashmir",
+                        "Korean",
+                        "Kurdish",
+                        "Latin",
+                        "Malay",
+                        "Marathi",
+                        "Nepali",
+                        "Polish",
+                        "Punjabi",
+                        "Romanian",
+                        "Russian",
+                        "Somali",
+                        "Sudanese",
+                        "Swedish",
+                        "Tamil",
+                        "Tegulu",
+                        "Thai",
+                        "Turkish",
+                        "Urdu",
+                        "Uzbek",
+
+
+
+                      ].
+                      map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Container(
+                            child: Text(value),
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (newValue){
+                        setState(() {
+                          _dropDownvalue=newValue;
+                        });
+
+                      },
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: screenHeight*0.03,),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Color(0xff0a7e8c),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(60)
                       )
-                    ],
                   ),
-                ),
-              ),
-              Padding(
-                padding:  EdgeInsets.only(left:screenWidth*0.03, ),
-                child:
-                Container(
-                  margin: EdgeInsets.only(top: screenHeight*0.02),
-                  child: DropdownButton<String>(
-
-
-                    isExpanded: true,
-
-                    hint: _dropDownvalue==null? Text("Select language"):
-                    Text(_dropDownvalue!, style: TextStyle(color: Colors.blue),),
-                    items: <String>[
-                      "Bengali",
-                      "English",
-                      "Spanish",
-                      "Chinese",
-                      "Germen",
-                      "Afrikaan",
-                      "Arabic",
-                      "Bhutan",
-                      "Bihar",
-                      "Bulgarian",
-                      "Cambodian",
-                      "French",
-                      "Greek",
-                      "Gujarati",
-                      "Hindi",
-                      "Iceland",
-                      "Indonesian",
-                      "Italian",
-                      "kannada",
-                      "Kashmir",
-                      "Korean",
-                      "Kurdish",
-                      "Latin",
-                      "Malay",
-                      "Marathi",
-                      "Nepali",
-                      "Polish",
-                      "Punjabi",
-                      "Romanian",
-                      "Russian",
-                      "Somali",
-                      "Sudanese",
-                      "Swedish",
-                      "Tamil",
-                      "Tegulu",
-                      "Thai",
-                      "Turkish",
-                      "Urdu",
-                      "Uzbek",
-
-
-
-                    ].
-                    map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Container(
-                          child: Text(value),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: (newValue){
-                      setState(() {
-                        _dropDownvalue=newValue;
-                      });
-
-                    },
-                  ),
-                ),
-              ),
-
-              SizedBox(height: screenHeight*0.03,),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xff0a7e8c),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(60)
-                  )
-                ),
                   child: isLoading
                       ? Container(
                     width: screenWidth*0.30,
-                        height: screenHeight*0.03,
-                        child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: screenHeight*0.02,
-                              width: screenWidth*0.04,
-                              child: CircularProgressIndicator(
+                    height: screenHeight*0.03,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: screenHeight*0.02,
+                          width: screenWidth*0.04,
+                          child: CircularProgressIndicator(
 
-                                color: Colors.white,
-                              ),
-                            ),
-                            SizedBox(width: screenWidth*0.04,),
-                            Text("Please wait"),
-                          ],
+                            color: Colors.white,
+                          ),
                         ),
-                      )
+                        SizedBox(width: screenWidth*0.04,),
+                        Text("Please wait"),
+                      ],
+                    ),
+                  )
                       :Padding(
-                        padding:  EdgeInsets.only(left: screenWidth*0.05, right: screenWidth*0.05),
-                        child: Text("Translate"),
-                      ),
+                    padding:  EdgeInsets.only(left: screenWidth*0.05, right: screenWidth*0.05),
+                    child: Text("Translate"),
+                  ),
 
                   onPressed: () async {
-                  _key.currentState!.validate();
-                  if(isLoading) return;
+                    _key.currentState!.validate();
+                    if(isLoading) return;
 
 
-                  setState(() => isLoading = true);
-                  await Future.delayed(Duration(seconds: 2));
-                  setState(() => isLoading = false);
+                    setState(() => isLoading = true);
+                    await Future.delayed(Duration(seconds: 2));
+                    setState(() => isLoading = false);
 
                     if(_dropDownvalue=="Bengali"){
                       translate_text("bn");
+
                     }else if(
                     _dropDownvalue=="English"){
                       translate_text("en");
@@ -403,32 +410,33 @@ class _EasyTranslatorState extends State<EasyTranslator> {
 
                   },
 
-              ),
+                ),
 
-              Padding(
-                padding:  EdgeInsets.all(screenWidth*0.02),
-                child: Container(
-                  margin: EdgeInsets.only(top: screenHeight*0.01),
-                  child: translated_text!=null?Text(translated_text!, style:
-                  TextStyle(fontSize: screenWidth*0.05),):Padding(
+                Padding(
+                  padding:  EdgeInsets.all(screenWidth*0.02),
+                  child: Container(
+                      margin: EdgeInsets.only(top: screenHeight*0.01),
+                      child: translated_text!=null?Text(translated_text!, style:
+                      TextStyle(fontSize: screenWidth*0.05),):Padding(
                         padding:  EdgeInsets.all(screenWidth*0.02),
                         child: Text(""),
                       )
+                  ),
                 ),
-              ),
 
-            ],
+              ],
+            ),
           ),
         ),
-      ),
 
+      ),
     );
   }
   void translate_text(String locale){
     translator.translate(myController.text,to: locale).then((value){
       setState(() {
         translated_text=value.text;
-
+        // myController.text="";
       });
     });
 
