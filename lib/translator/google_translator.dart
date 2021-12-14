@@ -33,7 +33,7 @@ class _EasyTranslatorState extends State<EasyTranslator> {
     final double screenWidth=MediaQuery.of(context).size.width;
     return WillPopScope(
       onWillPop: ()async{
-        myController.text="Enter Text";
+        myController.text="";
         _dropDownvalue="Select Language";
         translated_text="";
         return true;
@@ -59,6 +59,9 @@ class _EasyTranslatorState extends State<EasyTranslator> {
                   child: Container(
                     child: Column(
                       children: [
+                        Text("ইন্টারনেট কানেকশন অন করে নিন, আপনার টেক্সট লিখুন, এবং যে ভাষায় ট্রান্সলেশন করতে চান সেই ভাষা সিলেক্ট করে ট্রান্সলেট বাটনে প্রেস করুন।",style: TextStyle(
+                          fontSize: screenWidth*0.03, color: Colors.black45
+                        ),),
                         SizedBox(height: 30,),
                         Container(
                           width: double.infinity,
