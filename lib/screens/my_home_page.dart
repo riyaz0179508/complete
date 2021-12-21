@@ -11,6 +11,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+
 
 
 
@@ -47,9 +49,36 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+//varriable start
+
+BannerAd? bannerAd;
+bool isLoaded=false;
+
+//varriable end
 
 
+@override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+    bannerAd=BannerAd(
+        size: AdSize.banner, adUnitId: "ca-app-pub-3940256099942544/6300978111",
+        listener: BannerAdListener(
+          onAdLoaded: (ad){
+            setState(() {
+              isLoaded=true;
+            });
+            print("Banner Ad Loaded");
+          },
+          onAdFailedToLoad: (ad,error){
+            ad.dispose();
 
+          }
+        ),
+        request: AdRequest()
+    );
+    bannerAd!.load();
+  }
 
 
   @override
@@ -334,9 +363,18 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
+                    Container(
+                      height: screenHeight*0.10,
+                      child: Column(
+                        children: [
+                          isLoaded?Container(
+                            child: AdWidget(ad: bannerAd!,
+                            ),
+                          )
+                              :SizedBox()
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
